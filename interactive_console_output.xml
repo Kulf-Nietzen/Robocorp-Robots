@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221122 11:35:40.894" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\acron\.vscode\extensions\robocorp.robotframework-lsp-1.5.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Open the robot order website">
+<msg timestamp="20221122 11:35:41.541" level="FAIL">No keyword with name 'Open the robot order website' found.</msg>
+<status status="FAIL" starttime="20221122 11:35:41.541" endtime="20221122 11:35:41.542"/>
+</kw>
+<kw name="Get orders">
+<var>${ORDERS}</var>
+<status status="NOT RUN" starttime="20221122 11:35:41.543" endtime="20221122 11:35:41.543"/>
+</kw>
+<for flavor="IN">
+<var>${row}</var>
+<value>@{ORDERS}</value>
+<iter>
+<var name="${row}"/>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Close the annoying modal</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="NOT RUN" starttime="20221122 11:35:41.544" endtime="20221122 11:35:41.544"/>
+</kw>
+<kw name="Fill the form">
+<arg>${row}</arg>
+<status status="NOT RUN" starttime="20221122 11:35:41.545" endtime="20221122 11:35:41.545"/>
+</kw>
+<kw name="Preview the robot">
+<status status="NOT RUN" starttime="20221122 11:35:41.548" endtime="20221122 11:35:41.548"/>
+</kw>
+<kw name="Submit the order">
+<status status="NOT RUN" starttime="20221122 11:35:41.549" endtime="20221122 11:35:41.549"/>
+</kw>
+<try>
+<branch type="TRY">
+<kw name="Store the receipt as a PDF file">
+<arg>${row}[Order number]</arg>
+<status status="NOT RUN" starttime="20221122 11:35:41.550" endtime="20221122 11:35:41.550"/>
+</kw>
+<status status="NOT RUN" starttime="20221122 11:35:41.549" endtime="20221122 11:35:41.550"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Log" library="BuiltIn">
+<arg>SERVER ERROR</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20221122 11:35:41.550" endtime="20221122 11:35:41.550"/>
+</kw>
+<continue>
+<status status="NOT RUN" starttime="20221122 11:35:41.550" endtime="20221122 11:35:41.550"/>
+</continue>
+<status status="NOT RUN" starttime="20221122 11:35:41.550" endtime="20221122 11:35:41.550"/>
+</branch>
+<status status="NOT RUN" starttime="20221122 11:35:41.549" endtime="20221122 11:35:41.550"/>
+</try>
+<kw name="Take a screenshot of the robot">
+<arg>${row}[Order number]</arg>
+<status status="NOT RUN" starttime="20221122 11:35:41.552" endtime="20221122 11:35:41.552"/>
+</kw>
+<kw name="Embed the robot screenshot to the receipt PDF file">
+<arg>${row}[Order number]</arg>
+<status status="NOT RUN" starttime="20221122 11:35:41.553" endtime="20221122 11:35:41.553"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Go to order another robot</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="NOT RUN" starttime="20221122 11:35:41.553" endtime="20221122 11:35:41.553"/>
+</kw>
+<status status="NOT RUN" starttime="20221122 11:35:41.543" endtime="20221122 11:35:41.553"/>
+</iter>
+<status status="NOT RUN" starttime="20221122 11:35:41.543" endtime="20221122 11:35:41.553"/>
+</for>
+<kw name="Create a ZIP file of the receipts">
+<status status="NOT RUN" starttime="20221122 11:35:41.554" endtime="20221122 11:35:41.554"/>
+</kw>
+<status status="PASS" starttime="20221122 11:35:40.934" endtime="20221122 11:39:54.430"/>
+</kw>
+<status status="PASS" starttime="20221122 11:35:40.933" endtime="20221122 11:39:54.430"/>
+</test>
+<status status="PASS" starttime="20221122 11:35:40.897" endtime="20221122 11:39:54.431"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
